@@ -1,0 +1,38 @@
+.snapgrid-menu button {
+	padding: 4px;
+}
+
+.snapgrid-menu input {
+	padding: 5px;
+}
+
+.slick-headerrow-column {
+	padding: 0px !important;
+}
+
+.slick-headerrow-column .ui-autocomplete-input {
+	width: 100%;
+	height: 100%;
+	border:none;
+}
+
+.editor-text {
+	width: 100%;
+	height: 100%;
+	border:none;
+}
+
+.editor-text:focus { /* https://stackoverflow.com/a/9287816 TODO accessibility */
+	outline:none;
+}
+
+.snapgrid-counter {
+	float: right;
+}
+
+.ui-autocomplete { /* https://stackoverflow.com/a/9182921 */
+	max-height: 80vh;
+	overflow-y: auto;   /* prevent horizontal scrollbar */
+	overflow-x: hidden; /* add padding to account for vertical scrollbar */
+	z-index:1000 !important;
+} 

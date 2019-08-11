@@ -1,0 +1,59 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	background: WhiteSmoke;
+	color: #090909;
+	font-family: Raleway, sans-serif;
+	height: 100%;
+}
+
+.js-example {
+	padding-top: 1em;
+	padding-left: 1em;
+}
+
+.js-menuIcon {
+	position: absolute;
+	z-index: 999;
+	bottom: 1em;
+	left: 1em;
+}
+
+.layout-width-50perc {
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+}
+
+.layout-width-33perc {
+	display: inline-block;
+	width: 33%;
+	height: 100%;
+}
+
+.layout-top-left {
+	width: 50%;
+	height: 50%;
+	float: left;
+}
+
+.layout-top-right {
+	width: 50%;
+	height: 50%;
+	float: right;
+}
+
+.layout-bottom-left {
+	width: 50%;
+	height: 50%;
+	float: left;
+}
+
+.layout-bottom-right {
+	width: 50%;
+	height: 50%;
+	float: right;
+}

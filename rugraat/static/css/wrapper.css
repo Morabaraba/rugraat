@@ -1,0 +1,42 @@
+/* https://codepen.io/wolframhempel/pen/d508753b29c3001c24218bf3a6b25141 */ 
+#wrapper{
+  height: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#menuContainer{
+  width: 10%;
+  height: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  background: #222;
+}
+
+#menuContainer li{
+  cursor: move;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #333;
+  cursor: pointer;
+  padding: 10px 5px;
+  color: #BBB;
+  background: #1a1a1a;
+  font: 12px Arial, sans-serif;
+  list-style-type:none;
+}
+
+#menuContainer li:hover{
+  background: #111;
+  color: #CCC;
+}
+
+#layoutContainer{
+  width: 90%;
+  height: 100%;
+  position:absolute;
+  top: 0;
+  left: 10%;
+  box-shadow: -3px 0px 9px 0px rgba( 0, 0, 0, 0.4 );
+}

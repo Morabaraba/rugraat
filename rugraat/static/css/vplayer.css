@@ -1,0 +1,16 @@
+#js-vplayer {
+	padding-top: 0.25em;
+	height: 100%;
+	background: #000;
+	color: WhiteSmoke;
+}
+
+#js-vplayer #menu {
+	position: absolute;
+}
+
+#js-vplayer a {
+	display: inline-block;
+	margin-bottom: 20px;
+	color: WhiteSmoke;
+}
