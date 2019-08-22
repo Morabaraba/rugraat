@@ -287,7 +287,14 @@
 			}
 
 			self._dataView.beginUpdate()
+			try {
 			self._dataView.setItems(data)
+			} catch(error) {
+				if (error.message.indexOf("implement a unique 'id' property") > -1) {
+					_.each(data, function(item, index, arr) { item['id'] = index});
+					self._dataView.setItems(data)
+				}
+			}
 			self._setDefaultFilters()
 			//self._setDuplicateFilter()
 			self._dataView.endUpdate()
@@ -521,12 +528,12 @@
 
 
 	SnapGridComponent.prototype._generateColumns = function(rows, formatter) {
-		var columns = [{
+		var columns = [/*{
 			id: "selector",
 			name: "",
 			field: "selector",
-			width: 30
-		}]
+			width: 30,
+		}*/]
 
 		var keys = Object.keys(rows[0])
 		if (keys) {
@@ -539,7 +546,8 @@
 					field: key,
 					formatter: formatter,
 					width: 60,
-					editor: Slick.Editors.Text
+					editor: Slick.Editors.Text,
+					sortable: true 
 				}
 				columns.push(c)
 			})

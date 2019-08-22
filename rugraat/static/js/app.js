@@ -34,7 +34,9 @@
 					componentName: 'snapgrid',
 					componentState: {
 						//data: currentStockData,
-						url: '/rugraat/static/data/MOCK_DATA.csv',
+						//url: '/rugraat/static/data/u64q_bulkdata.csv',
+						
+						url: '/rugraat/static/data/29-Mar-2018-u64q-n.csv',
 						fetchType: 'GET',
 						counterChart: {
 							contentItemId: 'chart',
@@ -165,15 +167,18 @@
 					}, ]
 				}]
 			}
+			app.dispatcher.trigger('js:GoldenLayout.Create', { config: config0 })
+			/*
 			if (i == 1) app.dispatcher.trigger('js:GoldenLayout.Create', { config: config1 })
 			else app.dispatcher.trigger('js:GoldenLayout.Create', { name: 'layout1', $elId: '#layout1', config: config1 })
 			if (i >= 2) app.dispatcher.trigger('js:GoldenLayout.Create', { name: 'layout2', $elId: '#layout2', config: config2 })
 			if (i >= 3) app.dispatcher.trigger('js:GoldenLayout.Create', { name: 'layout3', $elId: '#layout3', config: config3 })
 			if (i >= 4) app.dispatcher.trigger('js:GoldenLayout.Create', { name: 'layout4', $elId: '#layout4', config: config4 })
+			*/
 		}
 		else { // just one master layout
 			app.state.layout.layoutCount = 1
-			app.dispatcher.trigger('js:GoldenLayout.Create', { config: config1 })
+			app.dispatcher.trigger('js:GoldenLayout.Create', { config: config0 })
 		}
 
 		app.dispatcher.trigger('js:GoldenLayout.registerComponent', { component: app.component.ExampleComponent })
